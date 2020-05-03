@@ -1,0 +1,156 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* RESET STYLING */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Global Style */
+html {
+  font-size: 16px;
+}
+
+/*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+body::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: url(./images/bg-intro-desktop.png);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+body {
+  background-color: hsl(0, 100%, 74%);
+}
+
+/* Creating Layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8vh 9.3vw;
+}
+
+#left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+#left h1 {
+  font-size: 3vw;
+  margin-bottom: 1.5rem;
+}
+
+#left p {
+  font-size: 1.1rem;
+}
+
+.cards {
+  box-shadow: 0 15px 6px -6px rgba(0, 0, 0, 0.5);
+
+  border-radius: 10px;
+}
+
+.cards h2 {
+  background: hsl(248, 32%, 49%);
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.cards h2 span {
+  font-weight: 100;
+}
+
+.cards p {
+  color: hsl(246, 25%, 77%);
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.cards p span {
+  color: hsl(154, 59%, 51%);
+}
+
+/* Form Div Styling */
+form {
+  width: 40vw;
+  min-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 10px;
+}
+
+form input {
+  margin-bottom: 1.5rem;
+  padding: 1rem 2rem;
+  height: 3.125rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid hsl(154, 59%, 51%);
+  border-radius: 5px;
+  outline: none;
+}
+
+form input:focus {
+  border: 1px solid hsl(249, 10%, 26%);
+}
+
+form input[type="submit"] {
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  transition: transform 0.3s linear;
+}
+
+form input[type="submit"]:active {
+  transform: scale(0.9);
+}
+
+/* Footer Styling */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #left {
+    text-align: center;
+  }
+
+  #left h1 {
+    font-size: 1.59rem;
+  }
+
+  #left p {
+    margin-bottom: 3rem;
+  }
+
+  .cards p {
+    font-size: 0.7rem;
+  }
+}
