@@ -1,16 +1,21 @@
-let form = document.querySelector("form");
+let form = document.querySelector("#myForm");
 let firstName = document.querySelector("#firstName");
 let lastName = document.querySelector("#lastName");
 let email = document.querySelector("#email");
 let password = document.querySelector("#password");
-let submitBtn = document.querySelector("#submit");
+let submitBtn = document.querySelector("#btn");
 let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+let formError = true;
 
 // Disabling refresh on form submisssion
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   //   checking for inputs (valid/invalid)
   checkingInput();
+
+  if (!formError) {
+    form.submit();
+  }
 });
 
 function checkingInput() {
@@ -48,10 +53,12 @@ function setErrorFor(inputName, customMessage) {
   inputName.parentElement.classList = "form-control error";
   let formControl = inputName.parentElement;
   formControl.querySelector(".form-control small").innerText = customMessage;
+  formError = true;
 }
 
 function removeErrorFor(inputName) {
   inputName.parentElement.classList = "form-control";
+  formError = false;
 }
 
 function isEmail(email) {

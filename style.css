@@ -142,7 +142,7 @@ form {
   border: 1px solid hsl(249, 10%, 26%);
 }
 
-#submit {
+#btn {
   color: white;
   width: 100%;
   border: none;
@@ -152,7 +152,7 @@ form {
   transition: transform 0.3s linear;
 }
 
-#submit:active {
+#btn:active {
   transform: scale(0.9);
 }
 
