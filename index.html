@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Intro component with sign up form</title>
-
+  <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -27,12 +28,37 @@
         <h2>Try it free 7 days <span>then $20/mo. thereafter</span></h2>
 
       </div>
-      <form class="cards">
-        <input type="text" placeholder="First Name" id="" required>
-        <input type="text" placeholder="Last Name" id="" required>
-        <input type="email" placeholder="Email Address" id="" required>
-        <input type="password" placeholder="Password" id="" required>
-        <input type="submit" value="CLAIM YOUR FREE TRIAL">
+
+      <form action="/" class="cards">
+        <div class="form-control ">
+          <label for=""></label>
+          <input type="text" placeholder="First Name" id="firstName">
+          <img src="./images/icon-error.svg" alt="">
+          <small>Error Message</small>
+
+        </div>
+        <div class="form-control ">
+          <label for=""></label>
+          <input type="text" placeholder="Last Name" id="lastName">
+          <img src="./images/icon-error.svg" alt="">
+          <small>Error Message</small>
+
+        </div>
+        <div class="form-control">
+          <label for=""></label>
+          <input type="email" placeholder="Email Address" id="email">
+          <img src="./images/icon-error.svg" alt="">
+          <small>Error Message</small>
+
+        </div>
+        <div class="form-control">
+          <label for=""></label>
+          <input type="password" placeholder="Password" id="password">
+          <img src="./images/icon-error.svg" alt="">
+          <small>Error Message</small>
+        </div>
+
+        <button id="submit">CLAIM YOUR FREE TRIAL</button>
         <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
       </form>
     </div>
@@ -43,6 +69,8 @@
       Coded by <a href="https://twitter.com/pvcodes" target="_blank">pvcodes</a>.
     </p>
   </footer>
+
+  <script defer src="script.js"></script>
 </body>
 
 </html>
